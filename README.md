@@ -1,7 +1,7 @@
 # simpleMesh v0.1 - a simple, easily deployed, mesh wireless network built using Raspberry PIs
 
 Assumptions...<br>
-Start with Openwrt images for Raspberry PIs, version n.nn (TBD)<br>
+<t>Start with Openwrt images for Raspberry PIs, version n.nn (TBD)<br>
 Internet gateway attaches at eth0<br>
 If internet is available on eth0, it's a gateway node.<br>
 If nothing is available on eth0, it's a mesh node.<br>
