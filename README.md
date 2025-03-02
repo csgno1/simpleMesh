@@ -1,17 +1,17 @@
 # simpleMesh v0.1 - a simple, easily deployed, mesh wireless network built using Raspberry PIs
 
-Assumptions...<br>
+##Assumptions...<br>
     Start with Openwrt images for Raspberry PIs, version n.nn (TBD)<br>
     Internet gateway attaches at eth0<br>
     If internet is available on eth0, it's a gateway node.<br>
     If nothing is available on eth0, it's a mesh node.<br>
 <br>
-# Getting started<br>
+## Getting started<br>
 <br>
-Set up wired network manually<br>
+###Set up wired network manually<br>
   vi /etc/config/network<br>
 <br>
-  config interface 'wan'<br>
+  ###config interface 'wan'<br>
       option proto 'dhcp'<br>
       option ifname 'eth0'  # Replace with your WAN interface name<br>
       option peerdns '1'    # (Optional) Use ISP-provided DNS<br>
@@ -19,24 +19,24 @@ Set up wired network manually<br>
   <br>
   /etc/init.d/network restart<br>
 <br>
-Install git:<br>
+###Install git:<br>
     opkg update<br>
     opgk install git<br>
     opkg install git-http<br>
 <br>
-Clone repo:<br>
+###Clone repo:<br>
 https://github.com/csgno1/simpleMesh.git<br>
 <br>
-change to the simpleMesh folder.<br>
+###change to the simpleMesh folder.<br>
 <br>
-Edit config.ini as appropriate.<br>
+###Edit config.ini as appropriate.<br>
 <br>
-Run the setup script once:<br>
+###Run the setup script once:<br>
     chmod +x mesh-setup.sh<br>
     ./mesh-setup.sh<br>
 <br>
-Start gateway monitoring:<br>
+###Start gateway monitoring:<br>
     chmod +x monitor-gateway.sh<br>
     ./monitor-gateway.sh &<br>
-Note: After testing, set up the gateway monitor as a service.<br>
+###Note: After testing, set up the gateway monitor as a service.<br>
 <br>
