@@ -27,7 +27,7 @@ Install git:<br>
 Clone repo:<br>
 https://github.com/csgno1/simpleMesh.git<br>
 <br>
-change to the simpleMesh folder<br>
+change to the simpleMesh folder, then set shell scripts as executible:<br>
 <br>
 chmod 755 *.sh<br>
 <br>
