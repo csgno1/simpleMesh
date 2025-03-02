@@ -23,7 +23,11 @@ Set up wired network manually<br>
 Clone repo:<br>
 https://github.com/csgno1/simpleMesh.git<br>
 <br>
-Edit mesh_config.ini as appropriate.<br>
+change to the simpleMesh folder<br>
+<br>
+chmod 755 *.sh<br>
+<br>
+Edit config.ini as appropriate.<br>
 <br>
 Run the setup script once:<br>
     chmod +x mesh-setup.sh<br>
