@@ -1,4 +1,4 @@
-# simpleMesh - a simple mesh wireless network using Raspberry PIs
+# simpleMesh - a simple mesh wireless network built using Raspberry PIs and easily deployed
 
 Assumptions...
 Start with Openwrt images for Raspberry PIs, version n.nn (TBD)
