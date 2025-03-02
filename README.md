@@ -19,6 +19,10 @@ Set up wired network manually<br>
   <br>
   /etc/init.d/network restart<br>
 <br>
+Install git:<br>
+    opkg update<br>
+    opgk install git<br>
+    opkg install git-http<br>
 <br>
 Clone repo:<br>
 https://github.com/csgno1/simpleMesh.git<br>
