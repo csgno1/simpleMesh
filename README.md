@@ -9,7 +9,7 @@ If nothing is available to eth0, it's a mesh node.<br>
 # Getting started<br>
 <br>
 Set up wired network manually<br>
-  nano /etc/config/network<br>
+  vi /etc/config/network<br>
 <br>
   config interface 'wan'<br>
       option proto 'dhcp'<br>
