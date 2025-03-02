@@ -1,4 +1,4 @@
-# simpleMesh v0.5 - a simple, easily deployed, mesh wireless network built using Raspberry PIs
+# simpleMesh v0.1 - a simple, easily deployed, mesh wireless network built using Raspberry PIs
 
 Assumptions...<br>
 Start with Openwrt images for Raspberry PIs, version n.nn (TBD)<br>
