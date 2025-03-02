@@ -19,17 +19,18 @@ Set up wired network manually<br>
   <br>
   /etc/init.d/network restart<br>
 <br>
-
-Clone repo:
-https://github.com/csgno1/simpleMesh.git
-
-Edit mesh_config.ini as appropriate.
-
-Run the setup script once:
-    chmod +x mesh-setup.sh
-    ./mesh-setup.sh
-
-Start gateway monitoring:
-    chmod +x monitor-gateway.sh
-    ./monitor-gateway.sh &
-Note: After testing, set up the gateway monitor as a service.
+<br>
+Clone repo:<br>
+https://github.com/csgno1/simpleMesh.git<br>
+<br>
+Edit mesh_config.ini as appropriate.<br>
+<br>
+Run the setup script once:<br>
+    chmod +x mesh-setup.sh<br>
+    ./mesh-setup.sh<br>
+<br>
+Start gateway monitoring:<br>
+    chmod +x monitor-gateway.sh<br>
+    ./monitor-gateway.sh &<br>
+Note: After testing, set up the gateway monitor as a service.<br>
+<br>
