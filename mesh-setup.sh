@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Path to the INI config file
-INI_FILE="/root/mesh_config.ini"
+INI_FILE="mesh_config.ini"
 
 # Parse the INI file to get settings
 SSID=$(awk -F'=' '/SSID/ {print $2}' $INI_FILE)
