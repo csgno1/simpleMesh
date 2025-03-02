@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Path to the INI file
-INI_FILE="/root/mesh_config.ini"
+INI_FILE="mesh_config.ini"
 # Read the gateway check interval from the INI file
 GATEWAY_CHECK_INTERVAL=$(awk -F'=' '/GatewayCheckInterval/ {print $2}' $INI_FILE)
 
