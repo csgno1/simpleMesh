@@ -12,10 +12,12 @@
 ### Set up wired network manually
     vi /etc/config/network<br>
 ### config interface 'wan'
-      option proto 'dhcp'<br>
-      option ifname 'eth0'  # Replace with your WAN interface name<br>
-      option peerdns '1'    # (Optional) Use ISP-provided DNS<br>
-      option defaultroute '1'<br>
+      option proto 'dhcp'
+      option ifname 'eth0'  # Replace with your WAN interface name
+      option peerdns '1'    # (Optional) Use ISP-provided DNS
+      option defaultroute '1'
+
+### Restart network
 
     /etc/init.d/network restart
 
