@@ -8,11 +8,10 @@
     If nothing is available on eth0, it's a mesh node.
 
 ## Getting started
-<br>
+
 ### Set up wired network manually
   vi /etc/config/network<br>
-<br>
-  ### config interface 'wan'
+### config interface 'wan'
       option proto 'dhcp'<br>
       option ifname 'eth0'  # Replace with your WAN interface name<br>
       option peerdns '1'    # (Optional) Use ISP-provided DNS<br>
