@@ -17,26 +17,26 @@
       option peerdns '1'    # (Optional) Use ISP-provided DNS<br>
       option defaultroute '1'<br>
 
-    /etc/init.d/network restart<br>
-<br>
-### Install git:<br>
-    opkg update<br>
-    opgk install git<br>
-    opkg install git-http<br>
-<br>
+    /etc/init.d/network restart
+
+### Install git:
+    opkg update
+    opgk install git
+    opkg install git-http
+
 ### Clone repo:<br>
-https://github.com/csgno1/simpleMesh.git<br>
+    https://github.com/csgno1/simpleMesh.git
+
+### Change to the simpleMesh folder.
 <br>
-### change to the simpleMesh folder.<br>
+### Edit config.ini as appropriate.
+
+### Run the setup script once:
+    chmod +x mesh-setup.sh
+    ./mesh-setup.sh
 <br>
-### Edit config.ini as appropriate.<br>
-<br>
-### Run the setup script once:<br>
-    chmod +x mesh-setup.sh<br>
-    ./mesh-setup.sh<br>
-<br>
-### Start gateway monitoring:<br>
-    chmod +x monitor-gateway.sh<br>
-    ./monitor-gateway.sh &<br>
-### Note: After testing, set up the gateway monitor as a service.<br>
-<br>
+### Start gateway monitoring:
+    chmod +x monitor-gateway.sh
+    ./monitor-gateway.sh &
+### Note: After testing, set up the gateway monitor as a service.
+
