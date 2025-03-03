@@ -28,13 +28,13 @@
     git clone https://github.com/csgno1/simpleMesh.git
 
 ### Change to the simpleMesh folder.
-<br>
+
 ### Edit config.ini as appropriate.
 
 ### Run the setup script once:
     chmod +x mesh-setup.sh
     ./mesh-setup.sh
-<br>
+
 ### Start gateway monitoring:
     chmod +x monitor-gateway.sh
     ./monitor-gateway.sh &
