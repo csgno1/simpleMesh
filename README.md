@@ -10,7 +10,7 @@
 ## Getting started
 
 ### Set up wired network manually
-  vi /etc/config/network<br>
+    vi /etc/config/network<br>
 ### config interface 'wan'
       option proto 'dhcp'<br>
       option ifname 'eth0'  # Replace with your WAN interface name<br>
