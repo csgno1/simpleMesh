@@ -28,6 +28,7 @@
     git clone https://github.com/csgno1/simpleMesh.git
 
 ### Change to the simpleMesh folder.
+    cd simpleMesh
 
 ### Edit config.ini as appropriate.
 
