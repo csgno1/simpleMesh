@@ -31,6 +31,11 @@
 
 ### Edit config.ini as appropriate.
 
+    [MeshNetwork]
+    SSID=mesh1
+    Password=ChangeMe
+    GatewayCheckInterval=60
+
 ### Run the setup script once:
     chmod +x mesh-setup.sh
     ./mesh-setup.sh
