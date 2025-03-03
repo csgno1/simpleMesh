@@ -16,8 +16,8 @@
       option ifname 'eth0'  # Replace with your WAN interface name<br>
       option peerdns '1'    # (Optional) Use ISP-provided DNS<br>
       option defaultroute '1'<br>
-  <br>
-  /etc/init.d/network restart<br>
+
+    /etc/init.d/network restart<br>
 <br>
 ### Install git:<br>
     opkg update<br>
