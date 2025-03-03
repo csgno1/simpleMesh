@@ -2,7 +2,7 @@
 
 ## Assumptions...
 
-- Start with Openwrt images for Raspberry PIs, version 24.10 (TBD)
+- Start with Openwrt images for Raspberry PIs, version 24.10
 - Internet gateway attaches at eth0
 - If internet is available on eth0, it's a gateway node.
 - If nothing is available on eth0, it's a mesh node.
