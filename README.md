@@ -25,7 +25,7 @@
     opkg install git-http
 
 ### Clone repo:<br>
-    https://github.com/csgno1/simpleMesh.git
+    git clone https://github.com/csgno1/simpleMesh.git
 
 ### Change to the simpleMesh folder.
 <br>
