@@ -1,4 +1,4 @@
-# simpleMesh v0.1 - a simple, easily deployed, mesh wireless network built using Raspberry PIs
+# simpleMesh v0.01 - a simple, easily deployed, mesh wireless network built using Raspberry PIs
 
 ## Assumptions...
 
@@ -48,3 +48,5 @@
     ./monitor-gateway.sh &
 ### Note: After testing, set up the gateway monitor as a service.
 
+### Releases
+0.01 - Not a release, not yet functional
