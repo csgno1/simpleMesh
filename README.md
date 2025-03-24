@@ -1,4 +1,4 @@
-# simpleMesh v0.01 - a simple, easily deployed, mesh wireless network built using Raspberry PIs
+# simpleMesh - a simple, easily deployed, mesh wireless network built using Raspberry PIs
 
 ## Assumptions...
 
