@@ -10,7 +10,7 @@ GATEWAY_CHECK_INTERVAL=$(awk -F'=' '/GatewayCheckInterval/ {print $2}' $INI_FILE
 
 # Install necessary packages
 opkg update
-opkg install wpad-mesh-wolfssl batctl
+opkg install wpad-mesh-openssl batctl kmod-batman-adv
 
 # Backup the current wireless configuration
 cp /etc/config/wireless /etc/config/wireless.bak
@@ -19,31 +19,52 @@ cp /etc/config/wireless /etc/config/wireless.bak
 uci set wireless.radio0.disabled='0'
 uci set wireless.radio0.channel='auto'
 uci set wireless.radio0.hwmode='11g'
-uci set wireless.radio0.type='mesh'
-uci set wireless.radio0.device='radio0'
+uci set wireless.radio0.htmode='HT20'
 
-# Setup SSID, encryption, 802.11r and WDS
-uci set wireless.mesh0.ssid=$SSID
-uci set wireless.mesh0.encryption='psk2+ccmp'
-uci set wireless.mesh0.key=$PASSWORD
-uci set wireless.mesh0.ieee80211r='1'
-uci set wireless.mesh0.ft_over_ds='1'
-uci set wireless.mesh0.ft_psk_generate_local='1'
-uci set wireless.mesh0.mobility_domain='1234'
-uci set wireless.mesh0.reassociation_deadline='100'
-
-# Enable WDS for wireless nodes to connect
-uci set wireless.mesh0.mode='sta'
+# Create mesh interface
+uci delete wireless.mesh0 2>/dev/null  # Remove previous config if it exists
+uci set wireless.mesh0=wifi-iface
 uci set wireless.mesh0.device='radio0'
+uci set wireless.mesh0.network='mesh'
+uci set wireless.mesh0.mode='mesh'
+uci set wireless.mesh0.mesh_id="$SSID"
+uci set wireless.mesh0.encryption='psk2+ccmp'
+uci set wireless.mesh0.key="$PASSWORD"
 uci set wireless.mesh0.disabled='0'
 
-# Apply the configuration
+# Commit and restart WiFi
 uci commit wireless
 wifi
 
+# Configure eth0 to use DHCP
+uci set network.lan.proto='dhcp'
+uci delete network.lan.ipaddr
+uci delete network.lan.netmask
+uci delete network.lan.gateway
+uci delete network.lan.dns
+
+# Configure batman-adv
+uci delete network.mesh 2>/dev/null  # Remove old mesh config if it exists
+uci set network.mesh=interface
+uci set network.mesh.proto='batadv'
+uci set network.mesh.mesh='bat0'
+
+# Configure batman-adv mesh interface
+uci delete network.bat0 2>/dev/null
+uci set network.bat0=interface
+uci set network.bat0.proto='batadv_hardif'
+uci set network.bat0.master='bat0'
+uci set network.bat0.ifname='mesh0'
+
+# Commit and restart network
+uci commit network
+/etc/init.d/network restart
+
 # Optional: Setup gateway monitoring script as a service
-/etc/init.d/gateway_monitor enable
-/etc/init.d/gateway_monitor start
+if [ -f "/etc/init.d/gateway_monitor" ]; then
+    /etc/init.d/gateway_monitor enable
+    /etc/init.d/gateway_monitor start
+fi
 
 # Output to indicate setup completion
-echo "Mesh node setup completed for $SSID"
+echo "Mesh node setup completed for $SSID, eth0 configured for DHCP"
