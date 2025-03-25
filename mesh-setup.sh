@@ -60,10 +60,11 @@ uci set network.bat0.ifname='mesh0'
 uci commit network
 /etc/init.d/network restart
 
-# Optional: Setup gateway monitoring script as a service
-if [ -f "/etc/init.d/gateway_monitor" ]; then
-    /etc/init.d/gateway_monitor enable
-    /etc/init.d/gateway_monitor start
+# Optional: Start gateway monitoring script if it exists
+SCRIPT_DIR="$(dirname "$0")"
+if [ -f "$SCRIPT_DIR/monitor-gateway.sh" ]; then
+    chmod +x "$SCRIPT_DIR/monitor-gateway.sh"
+    "$SCRIPT_DIR/monitor-gateway.sh" &
 fi
 
 # Output to indicate setup completion
