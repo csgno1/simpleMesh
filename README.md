@@ -43,7 +43,7 @@
     chmod +x setup-usb.sh
     ./setup-usb.sh
 
-### Run the setup script once:
+### Run the mesh network setup script once:
     chmod +x setup-mesh.sh
     ./setup-mesh.sh
 
