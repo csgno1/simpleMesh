@@ -52,7 +52,7 @@ wifi down && wifi up
 
 # Start the gateway monitoring script (located in the same folder as this script)
 SCRIPT_DIR=$(dirname "$0")
-"$SCRIPT_DIR/monitor-gateway.sh" &
+"$SCRIPT_DIR/gateway-monitor.sh" &
 
 # Output completion message
 echo "Mesh node setup completed for $SSID, eth0 configured for DHCP."
