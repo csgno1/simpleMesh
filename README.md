@@ -39,6 +39,10 @@
     Password=ChangeMe
     GatewayCheckInterval=60
 
+### Run the USB setup script once:
+    chmod +x setup-usb.sh
+    ./setup-usb.sh
+
 ### Run the setup script once:
     chmod +x setup-mesh.sh
     ./setup-mesh.sh
