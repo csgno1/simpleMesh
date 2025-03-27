@@ -40,8 +40,8 @@
     GatewayCheckInterval=60
 
 ### Run the setup script once:
-    chmod +x mesh-setup.sh
-    ./mesh-setup.sh
+    chmod +x setup-mesh.sh
+    ./setup-mesh.sh
 
 ### Start gateway monitoring:
     chmod +x monitor-gateway.sh
